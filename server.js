@@ -5,7 +5,7 @@ const app = express()
 require('dotenv').config()
 // const methodOverride = require('method-override')
 const cookieParser = require('cookie-parser')
-const authRoute = require('./routes/AuthRoute')
+const authRoute = require('./userRoutes/AuthRoute')
 
 //require controllers
 const birthdayController = require('./controllers/BirthdayController')
