@@ -1,0 +1,403 @@
+body {
+    text-align: center;
+    font-weight: bold;
+    background: #F06BA6;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #F06BA6;
+    padding: 30px;
+}
+
+nav {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8em;
+    background: #F06BA6;
+    padding-top: 35px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Prompt;
+    font-style: italic;
+    color: #7707C5;
+    border-bottom: 1px solid #7707C5;
+    box-shadow: 0px 4px 2px -3px rgb(55, 55, 55, 2);
+}
+
+label.logo {
+    color: black;
+    font-size: 2em;
+    line-height: 80px;
+    float: left;
+    padding: 0 20px;
+    font-weight: bold;
+    z-index: 2;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+
+nav a:hover {
+    color: #7707C5;
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    transition: text-shadow 0.4s ease;
+}
+
+nav a:visited {
+    color: #7707C5;
+    text-decoration: none;
+    font-size: 1.13em;
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 1.1rem;
+}
+
+.sidenav {
+height: 85%;
+width: 250px;
+position: fixed;
+z-index: 0;
+top: 0;
+left: 0;
+background-color: #F06BA6;
+border: 1px solid #7707C5;
+box-shadow: 5px 4px 2px -3px rgb(55, 55, 55, 2);
+text-align: center;
+padding-top: 310px;
+overflow: auto;
+padding-bottom: 30px;
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+
+.sidenav::-webkit-scrollbar {
+    display: none;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 18px;
+color: #818181;
+display: block;
+transition: 0.3s;
+width: 100%;
+}
+
+.sidenav a:hover {
+color: #f1f1f1;
+}
+
+.sideNavImg {
+    border-radius: 100%;
+    height: 4em;
+    width: 4em;
+    text-align: left;
+    padding: 10px;
+}
+
+.banner {
+   object-fit: cover;
+   width: 100%; 
+   height: 27em;
+   border-radius: 0; 
+}
+
+
+.page-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 250px;
+}
+
+.articleImage {
+    width: 600px;
+    height: auto;
+    max-height: 100%;
+    border-radius: 0;
+}
+
+.artcleOne, .articleTwo {
+    height: 400px;
+}
+
+.inGrid {
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 0;
+}
+
+.landing {
+    filter: blur(1px);
+    width: 850px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10%;
+    padding: 20px;
+}
+
+.philosophy-container {
+    max-width: 800px;
+    margin: 0px;
+    padding: 20px 100px;
+   
+}
+
+.philosophy {
+    padding: 20px;
+    text-align: left;
+    word-wrap: break-word;
+    max-width: 850px;
+    margin: 0px;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    padding: 30px;
+}
+
+.articleOne {
+    grid-column: 1;
+    animation: fadeIn 7s;
+    -webkit-animation: fadeIn 7s;
+    -moz-animation: fadeIn 7s;
+    -o-animation: fadeIn 7s;
+    -ms-animation: fadeIn 7s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.articleTwo {
+    grid-column: 2;
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+}
+
+.container {
+    padding: 20px 16px;
+}
+
+#root {
+    text-align: center;
+    margin-top: 2em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(28, 178, 28);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    transition: text-shadow 0.4s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 35px;
+}
+
+.btn {
+    background-color: rgb(33, 212, 72);
+    border-color: rgb(33, 212, 72);
+    color: white;
+    margin-bottom: 50px;
+}
+
+.btn:hover {
+    background-color: white;
+    border-color: rgb(33, 212, 72);
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgb(25, 156, 53, 50);
+    transition: background-color 0.5s ease;
+}
+
+.form-control {
+    text-align: center;
+}
+
+.form-range {
+    max-width: 300px;
+    margin: 15px;
+    padding: 0.25rem;
+}
+
+.form-check-input {
+    font-size: 1.25em;
+    margin-left: 10px;
+}
+
+.col-md-4 {
+    max-width: 450px;
+    margin: 10 auto;
+    padding: 2em;
+    font-size: 1.3rem;
+}
+
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    border-top: 1px solid rgba(66, 66, 66, 0.688);
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #F06BA6;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin-right: 20px;
+
+}
+
+footer ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+footer ul li a {
+    text-decoration: none;
+}
+
+#subtitle {
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+form {
+    padding: 20px;
+    margin: 30px;
+}
+
+input {
+    width: 100%; 
+    padding: 10px 20px; 
+    margin: 8px 0; 
+    border: 2px solid rgb(28, 178, 28);
+    box-sizing: border-box;
+}
+
+input:focus {
+    background-color:rgb(33, 212, 72);
+    border: 3px solid #555;
+}
+
+select {
+    width: 100%;
+    padding: 10px 20px; 
+    margin: 8px 0; 
+    border: 2px solid rgb(28, 178, 28);
+    box-sizing: border-box
+}
+
+select:focus {
+    background-color: rgb(28, 178, 28);
+    border: 3px solid #555;
+}
+
+.showImg {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+marquee {
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkgreen;
+    background-color: rgb(127, 255, 136);
+}

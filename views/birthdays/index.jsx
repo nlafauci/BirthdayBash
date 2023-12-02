@@ -2,21 +2,21 @@ const React = require('react')
 const Def = require('../default')
 
 function index (data) {
-    let plantsFormatted = data.plants.map((plant) => {
+    let birthdaysFormatted = data.birthdays.map((birthday) => {
       return (
-        <div key={plant.id} className="col-md-4">
+        <div key={birthday.id} className="col-md-4">
           <h2>
-            <a href={`/plants/${plant.id}`}>{plant.name}</a>
+            <a href={`/plants/${birthday.id}`}>{birthday.name}</a>
           </h2>
-          <img className="inGrid" src={plant.image} alt={plant.name}/>
+          <img className="inGrid" src={birthday.image} alt={birthday.name}/>
         </div>  
       )
     })
     return (
       <Def>
           <main>
-              <h1>PLANTS INDEX PAGE</h1>
-              <div className="row">{ plantsFormatted }</div>
+              <h1>BIRTHDAY INDEX PAGE</h1>
+              <div className="row">{ birthdaysFormatted }</div>
           </main>
       </Def>
   )
