@@ -1,19 +1,7 @@
-//user model
+//birthday model
 const mongoose = require('mongoose')
 
-const userSchema = new mongoose.Schema({
-    userID: {
-        type: String,
-        required: true,
-    },
-    userEmail: {
-        type: String,
-        required: true,
-    },
-    userPassword:{
-        type: String,
-        required: true,
-    },
+const birthdaySchema = new mongoose.Schema({
     firstName: {
         type: String,
         required: true,
@@ -23,7 +11,7 @@ const userSchema = new mongoose.Schema({
     },
     contactPhoto: {
         type: String,
-        default: "https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg",
+        default: "https://images.unsplash.com/photo-1634037227458-abdbf697806e?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     birthday: {
         type: Date,
@@ -48,4 +36,4 @@ if (today.getMonth() < birthday.getMonth() || (today.getMonth() === birthday.get
 
 const sentence = `${this.firstname}'s birthday is on ${this.birthday}, making them ${age} years old.`;
 
-module.exports = mongoose.model('Users', userSchema)
+module.exports = mongoose.model('Birthdays', birthdaySchema)
