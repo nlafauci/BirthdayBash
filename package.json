@@ -2,9 +2,9 @@
   "name": "birthdaybash",
   "version": "1.0.0",
   "description": "Birthday Bash is an online service where users can add, view, and get a list of their frieds' birthdays.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx nodemon server.js -e .js,.jsx"
   },
   "keywords": [],
   "author": "",
