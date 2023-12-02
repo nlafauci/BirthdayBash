@@ -23,8 +23,17 @@ const birthdaySchema = new mongoose.Schema({
     }
 })
 
-birthdaySchema.methods.birthdayParagraph = function() {
-    return `${this.firstName}'s birthday is on ${this.birthday}, which makes them ${}`
+//constants for calculating birthdays
+const today = new Date();
+const birthday = new Date(this.birthday);
+const age = today.getFullYear() - birthday.getFullYear();
+
+//adjust age based on the birthdate and current date
+
+if (today.getMonth() < birthday.getMonth() || (today.getMont() === birthday.getMont() && today.getDate() < birthday.getDate())) {
+    age --;
 }
+
+const sentence = `${this.firstname}'s birthday is on ${this.birthday}, making them ${age} years old.`;
 
 module.exports = mongoose.model('Birthdays', birthdaySchema)
