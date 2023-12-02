@@ -3,15 +3,14 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
-    username: {
-        type: String,
-        required: [true, "Your username is required"],
-        unique: true,
-    },
     email: {
         type: String,
         required: [true, 'Your email address is required'],
         unique: true,
+    },
+    username: {
+        type: String,
+        required: [true, "Your username is required"],
     },
     password:{
         type: String,
@@ -19,7 +18,6 @@ const userSchema = new mongoose.Schema({
     },
     firstName: {
         type: String,
-        required: true,
     },
     lastName: {
         type: String,
@@ -30,16 +28,11 @@ const userSchema = new mongoose.Schema({
     },
     birthday: {
         type: Date,
-        required: true,
     },
     createdAt: {
         type: Date,
         default: new Date(),
     },
-})
-
-userSchema.pre('save', async function() {
-    this.password = await bcrypt.hash(this.password, 12);
 });
 
 //constants for calculating birthdays
@@ -54,5 +47,9 @@ if (today.getMonth() < birthday.getMonth() || (today.getMonth() === birthday.get
 }
 
 const sentence = `${this.firstname}'s birthday is on ${this.birthday}, making them ${age} years old.`;
+
+userSchema.pre('save', async function() {
+    this.password = await bcrypt.hash(this.password, 12);
+});
 
 module.exports = mongoose.model('User', userSchema)

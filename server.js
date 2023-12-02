@@ -1,21 +1,15 @@
 const express = require('express')
-require('dotenv').config()
-const cors = require('cors')
-const methodOverride = require('method-override')
 const mongoose = require('mongoose')
+const cors = require('cors')
+const app = express()
+require('dotenv').config()
+// const methodOverride = require('method-override')
 const cookieParser = require('cookie-parser')
 const authRoute = require('./routes/AuthRoute')
-const app = express()
-const bcrypt = require('bcryptjs')
 
 //require controllers
 const birthdayController = require('./controllers/BirthdayController')
-const userController = require('./controllers/UserController')
-
-
-
-
-
+// const userController = require('./controllers/UserController')
 
 
 // Middleware (express settings)
@@ -24,11 +18,11 @@ app.use(express.static('public'))
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
-app.use(methodOverride('_method'))
+// app.use(methodOverride('_method'))
 
 //CONTROLLERS
 app.use('/birthdays', birthdayController)
-app.use('/users', userController)
+// app.use('/users', userController)
 
 
 // BASIC ROUTES
@@ -41,14 +35,17 @@ app.get('*', (req, res) => {
 })
 
 // MONGOOSE DATABASE CONNECTION
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true })
-    .then(() => console.log('DB connected'))
-    .catch(err => console.error(err));
+    useUnifiedTopology: true,
+    })
+    .then(() => console.log('MongoDB connected'))
+    .catch((err) => console.error(err));
 
-
+//terminal
 const PORT = process.env.PORT
+app.listen(PORT, console.log(`Server is listening on port ${PORT}`))
+
 
 
 app.use(
@@ -59,11 +56,10 @@ app.use(
     })
   );
 
-//terminal
-app.listen(PORT, console.log(`App is listening on ${PORT}`))
-
 
 app.use(cookieParser());
+
 app.use(express.json());
+
 app.use("/", authRoute);
 
