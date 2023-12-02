@@ -30,7 +30,7 @@ const age = today.getFullYear() - birthday.getFullYear();
 
 //adjust age based on the birthdate and current date
 
-if (today.getMonth() < birthday.getMonth() || (today.getMont() === birthday.getMont() && today.getDate() < birthday.getDate())) {
+if (today.getMonth() < birthday.getMonth() || (today.getMonth() === birthday.getMonth() && today.getDate() < birthday.getDate())) {
     age --;
 }
 
