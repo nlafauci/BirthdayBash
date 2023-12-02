@@ -6,7 +6,7 @@ function home(data) {
     <Def>
       <main>
         <div>
-          <marquee>Howdy Planters! Autumn is upon us! Why not take a look at your fellow gardener's tips for growing the greatest pumpkin ever this year?</marquee>
+          <marquee>Welcome to Birthday Bash! Remembering is caring :D</marquee>
           <img src="https://images.unsplash.com/photo-1562778380-180f296dd897?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" className="landing" alt="Photo of a garden being watered with a watering can" />
           <div id="subtitle">
             Photo by <a href="https://unsplash.com/@pillepriske">Pille Priske</a> on <a href="https://unsplash.com/photos/vGjGvtSfys4">Unsplash</a>
@@ -14,9 +14,9 @@ function home(data) {
         </div>
         <div className="philosophy-container">
           <div className="philosophy">
-            <h2><i>HarvestGarden</i></h2>
-            <p>Growing for a new tomorrow.</p>
-            <p>HarvestGarden is your home for finding out how to grow and cultivate plants in your collection and the great outdoors.</p>
+            <h2><i>Birthday Bash</i></h2>
+            <p>Making celebrations more impactful</p>
+            <p>Birthday Bash is the place to be to remind yourself about the people you care about most and schedule around those times</p>
             <a href="/plants">
               <button className="btn btn-danger btn-lg" aria-label="Button directing user to HarvestGarden plant database">Learn Now!</button>
             </a>
@@ -31,7 +31,7 @@ function home(data) {
             </div>
             <div className="container">
               <h1>Our Mission</h1>
-              <p>This page started on the foundation that we wanted to educate, encourage, and progress plant cultivation from where it currently stands. We believe that gardening and agriculture are the key to providing for a better future and want to help support farmers, gardeners, and others who share in that same vision. </p>
+              <p>This site was created as a way to help people document their loved ones birthdays. We believe that celebrations are important times in peoples lives and being able to remember those times and plan around them accordingly is important, especially since life is too short. </p>
             </div>
           </div>
 
@@ -42,7 +42,7 @@ function home(data) {
             </div>
             <div className="container">
               <h1>Services</h1>
-              <p>This site includes plant species and subspecies, water and light specifications of plants, and whether these plants are best suited for indoors and outdoors. Viewers can comment and submit queries about their specific methods of growing these plants, which are moderated by the site team. </p>
+              <p>This site allows you to keep track of birthdays with our planner system, where you can upload, edit, and delete birthdays from your personal account.</p>
             </div>
           </div>
         </div>
