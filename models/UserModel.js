@@ -8,12 +8,12 @@ const userSchema = new mongoose.Schema({
         required: [true, "Your username is required"],
         unique: true,
     },
-    userEmail: {
+    email: {
         type: String,
         required: [true, 'Your email address is required'],
         unique: true,
     },
-    userPassword:{
+    password:{
         type: String,
         required: [true, 'Your password is required'],
     },
@@ -31,10 +31,6 @@ const userSchema = new mongoose.Schema({
     birthday: {
         type: Date,
         required: true,
-    },
-    notes: {
-        type: String,
-        required: false,
     },
     createdAt: {
         type: Date,
