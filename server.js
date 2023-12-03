@@ -1,11 +1,15 @@
 const express = require('express')
-require('dotenv').config()
-const methodOverride = require('method-override')
 const mongoose = require('mongoose')
-const birthdayController = require('./controllers/BirthdayController')
-const userController = require('./controllers/UserController')
-
+const cors = require('cors')
 const app = express()
+require('dotenv').config()
+// const methodOverride = require('method-override')
+const cookieParser = require('cookie-parser')
+const authRoute = require('./userRoutes/AuthRoute')
+
+//require controllers
+const birthdayController = require('./controllers/BirthdayController')
+// const userController = require('./controllers/UserController')
 
 
 // Middleware (express settings)
@@ -14,11 +18,11 @@ app.use(express.static('public'))
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
-app.use(methodOverride('_method'))
+// app.use(methodOverride('_method'))
 
 //CONTROLLERS
 app.use('/birthdays', birthdayController)
-app.use('/users', userController)
+// app.use('/users', userController)
 
 
 // BASIC ROUTES
@@ -31,15 +35,31 @@ app.get('*', (req, res) => {
 })
 
 // MONGOOSE DATABASE CONNECTION
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true })
-    .then(() => console.log('DB connected'))
-    .catch(err => console.error(err));
-
-
-const PORT = process.env.PORT
+    useUnifiedTopology: true,
+    })
+    .then(() => console.log('MongoDB connected'))
+    .catch((err) => console.error(err));
 
 //terminal
-app.listen(PORT, console.log(`App is listening on ${PORT}`))
+const PORT = process.env.PORT
+app.listen(PORT, console.log(`Server is listening on port ${PORT}`))
+
+
+
+app.use(
+    cors({
+      origin: ["http://localhost:3000"],
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      credentials: true,
+    })
+  );
+
+
+app.use(cookieParser());
+
+app.use(express.json());
+
+app.use("/", authRoute);
 
