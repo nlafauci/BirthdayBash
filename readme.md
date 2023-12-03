@@ -8,6 +8,7 @@ Next create a `.env` file inside of `backend`. It will need to contain the follo
 ```
 PORT=5000
 PG_URI=postgres://[PG Username]:[PG Password]@localhost:5432/birthdaybash
+TOKEN_KEY=happybirthday
 ```
 
 Next `cd` into `backend` and run `npm install` to install dependencies for the API.
