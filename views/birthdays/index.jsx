@@ -153,8 +153,10 @@ function index(data) {
             </div>
           </div>
         </main>
+        <div className="recordedBirthdays">
         <h2>Your Recorded Birthdays</h2>
         <div className="row">{birthdaysFormatted}</div>
+        </div>
       </main>
     </Def>
   );

@@ -37,7 +37,9 @@ function Def(props) {
           <footer>
           <div className="container">
             <span className="my-info">
-              ✦ BirthdayBash ✦
+            <img src="../images/BirthdayBash16fav.png" alt="BirthdayBash Logo" />
+             BirthdayBash 
+             <img src="../images/BirthdayBash16fav.png" alt="BirthdayBash Logo" />
               <p className="copyright">
                 Copyright BirthdayBash-
                 {new Date().getFullYear()}
