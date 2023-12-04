@@ -1,10 +1,10 @@
 const React = require('react')
 
-function Def(html) {
+function Def(props) {
   return (
     <html lang="en">
       <head>
-        <title>{html.title}</title>
+        <title>{props.title}</title>
         <link rel="icon" type="image/png" href="../images/HGFavicon.png" />
         <link
           rel="stylesheet"
@@ -18,7 +18,7 @@ function Def(html) {
       <body>
         <nav aria-label="Navigation Bar">
           <a href="/birthdays">
-            <label className="logo" aria-label="Birthday Logo">BirthdayBash</label>
+          <label className="logomini" aria-label="BirthdayBash Logo"><img src="../images/BirthdayBashLogoMini.png"/></label>
           </a>
           <ul>
             <li>
@@ -31,7 +31,7 @@ function Def(html) {
         </nav>
         <div id="root">
         <div className="page-container">
-          {html.children}
+          {props.children}
           </div>
           </div>
           <footer>
