@@ -1,10 +1,35 @@
 const React = require('react')
 const Def = require('./default')
 
-function home(data) {
+function home(html) {
   return (
-    <Def>
+    <html lang="en">
+      <head>
+        <title>{html.title}</title>
+        <link rel="icon" type="image/png" href="../images/HGFavicon.png" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+          crossOrigin="anonymous"
+        ></link>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,800&family=Prompt:ital,wght@0,400;0,600;1,600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/styles.css" />
+      </head>
       <main>
+      <nav aria-label="Navigation Bar">
+          <a href="/">
+            <label className="logo" aria-label="HarvestGarden Logo">BirthdayBash</label>
+          </a>
+          <ul>
+            <li>
+              <a href="/login" aria-label="Homepage Navigation Link"><button className="btn btn-danger btn-lg" aria-label="Button directing user to HarvestGarden plant database">Login</button></a>
+            </li>
+            <li>
+              <a href="/signup" aria-label="Database Navigation Link"><button className="btn btn-danger btn-lg" aria-label="Button directing user to HarvestGarden plant database">Sign up</button></a>
+            </li>
+          </ul>
+        </nav>
         <div>
           <marquee>Welcome to Birthday Bash! Remembering is caring :D</marquee>
           <img src="https://images.unsplash.com/photo-1562778380-180f296dd897?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" className="landing" alt="Photo of a garden being watered with a watering can" />
@@ -46,8 +71,25 @@ function home(data) {
             </div>
           </div>
         </div>
+        <footer>
+          <div className="container">
+            <span className="my-info">
+              ✦ BirthdayBash ✦
+              <p className="copyright">
+                Copyright BirthdayBash-
+                {new Date().getFullYear()}
+              </p>
+              <p>
+                <img src="../images/BirthdayBash16fav.png" alt="BirthdayBash Logo" />
+              </p>
+              <div id="subtitle">
+                <b>Every day is somebody's birthday!</b>
+              </div>
+            </span>
+          </div>
+        </footer>
       </main>
-    </Def>
+      </html>
   )
 }
 

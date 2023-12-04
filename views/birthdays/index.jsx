@@ -12,9 +12,21 @@ function index (data) {
         </div>  
       )
     })
+    let birthdaysSideNav = data.birthdays.map((birthday) => {
+      return (
+        <div key={birthday.id}>
+          <img className="sideNavImg" src={birthday.pic} alt={birthday.firstName}/>
+          <a href={`/birthdays/${birthday.id}`}>{birthday.firstName}</a>
+        </div>  
+      )
+    })
     return (
       <Def>
           <main>
+          <nav className="sidenav">
+          <h5>Upcoming Birthdays</h5>
+          { birthdaysSideNav }             
+          </nav>
               <h1>BIRTHDAY INDEX PAGE</h1>
               <div className="row">{ birthdaysFormatted }</div>
           </main>
