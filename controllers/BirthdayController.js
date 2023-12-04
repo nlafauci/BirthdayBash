@@ -2,67 +2,76 @@
 const router = require('express').Router()
 const db = require("../models")
 
-const { Birthday } = db
 
 // Dashboard Routes
-router.post('/', async (req, res) => {
-    if (!req.body.pic) {
-        req.body.pic = ''
-    }
-    if (!req.body.name) {
-        req.body.name = 'Name'
-    }
-    if (!req.body.day) {
-        req.body.day = '01'
-    }
-    if (!req.body.month) {
-        req.body.month = '12'
-    }
-    const birthday = await Birthday.create(req.body)
-    res.json(birthday)
-})
-
+//GET index page
 router.get('/', async (req, res) => {
-    const birthdays = await Birthday.findAll()
-    res.json(birthdays)
+    await db.Birthdays.find()
+    .then((birthdays) => {
+      res.render('birthdays/index', { birthdays })
+    })
+    .catch(err => {
+      console.log(err)
+      res.render('error404')
+    })
+  })
+// GET birthday show page
+router.get('/:id', async (req, res) => {
+    await db.Birthdays.findById(req.params._id)
+    .then(birthday => {
+        res.render('birthdays/show', { birthday })
+    })
+    .catch(err => {
+        console.log('err', err)
+        res.render('error404')
+    })
 })
+// GET edit birthday form
+router.get('/:id/edit', async (req, res) => {
+   await db.Birthdays.findById(req.params._id)
+    .then(birthday => {
+        res.render('birthdays/edit', { birthday })
+    })
+    .catch(err => {
+        res.render('error404')
+    })
+  })
 
-router.get('/:birthdayId', async (req, res) => {
-    let birthdayId = Number(req.params.birthdayId)
-    if (isNaN(birthdayId)) {
-        res.status(404).json({ message: `Invalid id "${birthdayId}" `})
-    } else {
-        const birthday = await Birthday.findOne({
-            where: { birthdayId: birthdayId },
-            include: {
-                association: 'comments',
-                include: 'author'
-            }
-        })
-        if (!birthday) {
-            res.status(404).json({ message: `Could not find place with id "${placeId}"` })
-        } else {
-            res.json(birthday)
-        }
-    }
-})
+// GET new birthday form
+router.get('/new', async (req, res) => {
+    const birthdays = await db.Birthdays.find()
+    res.render('birthdays/new', { birthdays })
+  })
 
-router.put('/:birthdayId', async (req, res) => {
-    let birthdayId = Number(req.params.birthdayId)
-    if (isNaN(birthdayId)) {
-        res.status(404).json({ message: `Invalid id "${birthdayId}"` })
-    } else {
-        const birthday = await Birthday.findOne({
-            where: { birthdayId: birthdayId },
-        })
-        if (!birthday) {
-            res.status(404).json({ message: `Could not find birthday with id "${birthdayId}" `})
-        } else {
-            Object.assign(birthday, req.body)
-            await birthday.save()
-            res.json(birthday)
-        }
-    }
-})
+// POST create birthday event
+// router.post('/', async (req, res) => {
+//     if (!req.body.pic) req.body.pic = undefined
+//     await db.Birthdays.create(req.body)
+//     .then(() => {
+//         res.redirect('/birthdays')
+//       })
+//       .catch(err => {
+//         console.log('err', err)
+//         res.render('error404')
+//       })
+// })
+  
+// router.put('/:id/edit', async (req, res) => {
+//     let birthdayId = Number(req.params.birthdayId)
+//     if (isNaN(birthdayId)) {
+//         res.status(404).json({ message: `Invalid id "${birthdayId}"` })
+//     } else {
+//         const birthday = await Birthdays.findOne({
+//             where: { birthdayId: birthdayId },
+//         })
+//         if (!birthday) {
+//             res.status(404).json({ message: `Could not find birthday with id "${birthdayId}" `})
+//         } else {
+//             Object.assign(birthday, req.body)
+//             await birthday.save()
+//             res.json(birthday)
+//         }
+//     }
+// })
 
 module.exports = router

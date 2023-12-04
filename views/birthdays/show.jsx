@@ -5,9 +5,9 @@ function show(data) {
     return (
         <Def>
             <main>
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-sm-6">
-                        <img src={data.birthday.image} alt={data.birthday.name} className="showImg" />
+                        <img src={data.birthday.pic} alt={data.birthday.firstName} className="showImg" />
                         <h3>
                             {data.birthday.name}
                         </h3>
@@ -34,20 +34,7 @@ function show(data) {
                             <input type='submit' value='DELETE' aria-label="Delete Button"/>
                         </form>
                     </div>
-                </div>
-                <h1>Comments</h1>
-                {comments}
-                <form method="POST" action={`/birthdays/${data.birthday.id}/comment`}>
-                    <div className="form-group">
-                        <label htmlFor="content"> Content </label>
-                        <textarea name="content" className="form-control"> </textarea>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="author">Author</label>
-                        <input className="form-control" id="author" name="author" />
-                    </div>
-                    <input className="btn btn-primary" type="submit" value="Add Comment" aria-label="Add Comment Button"/>
-                </form>
+                </div> */}
             </main>
         </Def>
     )
