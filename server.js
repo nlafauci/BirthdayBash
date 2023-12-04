@@ -9,7 +9,7 @@ const authRoute = require('./userRoutes/AuthRoute')
 
 //require controllers
 const birthdayController = require('./controllers/birthdays')
-// const userController = require('./controllers/UserController')
+// const userController = require('./controllers/users')
 
 
 // Middleware (express settings)
@@ -28,6 +28,10 @@ app.use('/birthdays', birthdayController)
 // BASIC ROUTES
 app.get('/', (req, res) => {
     res.render('home')
+})
+
+app.get('/login', (req,res) => {
+  res.render('login')
 })
 
 app.get('*', (req, res) => {
