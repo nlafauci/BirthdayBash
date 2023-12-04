@@ -20,16 +20,6 @@ function edit_form(data) {
           <input type="date" id="birthday" name="birthday" value={data.plant.birthday} required/>
         </div>
         <div className="form-group">
-          <label htmlFor="birthdate">Birthdate</label>
-          <DatePicker
-            selected={new Date(birthday.year, birthday.month - 1, birthday.day)}
-            onChange={handleDateChange}
-            className="form-control"
-            id="birthdate"
-            dateFormat="MM/dd/yyyy"
-          />
-        </div>
-        <div className="form-group">
           <label htmlFor="notes">Notes</label>
           <textarea id="notes" name="notes" value={data.plant.notes} />
         </div>
