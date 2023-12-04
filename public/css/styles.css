@@ -4,452 +4,399 @@ body {
 }
 
 body {
-    text-align: center;
-    font-weight: bold;
-    background: #F06BA6;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  background: #F06BA6;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-/* @media screen and (min-width: 768px) {
-    body {
-        font-size: 6em;
-        background: #fff;
-    }
-
-    .page-container {
-        margin-left: 10px;
-    }
-
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 2rem;
+    background: #fff;
+  }
+  .page-container {
+    margin-left: 10px;
+  }
 }
-
 @media screen and (min-width: 480px) {
-    body {
-        font-size: 10em;
-        background: #2f0aa8;
-    }
-
-    .page-container {
-        margin-left: 102px;
-    }
-
-} */
-
+  body {
+    font-size: 3rem;
+    background: #F06BA6;
+  }
+  .page-container {
+    margin-left: 10px;
+  }
+  nav {
+    height: 20px;
+  }
+}
 main {
-    margin-right: 20px;
-    margin-left: 20px;
-    background-color: #F06BA6;
-    padding: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: #F06BA6;
+  padding: 30px;
 }
 
 nav {
-    position: sticky;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 8em;
-    background: #F06BA6;
-    padding-top: 35px;
-    text-align: center;
-    text-decoration: none;
-    font-family: Prompt;
-    font-style: italic;
-    color: #7707C5;
-    border-bottom: 1px solid #7707C5;
-    box-shadow: 0px 4px 2px -3px rgb(55, 55, 55, 2);
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 8em;
+  background: #F06BA6;
+  padding-top: 35px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Prompt;
+  font-style: italic;
+  color: #7707C5;
+  border-bottom: 1px solid #7707C5;
+  box-shadow: 0px 4px 2px -3px rgb(55, 55, 55);
 }
 
 label.logo {
-    color: black;
-    float: left;
-    margin-top: -60px;
-    font-weight: bold;
-    z-index: 2;
-
+  color: black;
+  float: left;
+  margin-top: -60px;
+  font-weight: bold;
+  z-index: 2;
 }
 
 label.logomini {
-    color: black;
-    float: left;
-    margin-top: -45px;
-    font-weight: bold;
-    z-index: 2;
-
+  color: black;
+  float: left;
+  margin-top: -45px;
+  font-weight: bold;
+  z-index: 2;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    float: right;
-    margin-right: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  margin-right: 20px;
 }
 
 nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 5px;
+  display: inline-block;
+  line-height: 80px;
+  margin: 5px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    font-size: 5em;
-    text-transform: uppercase;
+  text-decoration: none;
+  font-size: 5em;
+  text-transform: uppercase;
 }
 
-
 nav a:hover {
-    color: #7707C5;
-    text-decoration: none;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-    transition: text-shadow 0.4s ease;
+  color: #7707C5;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  transition: text-shadow 0.4s ease;
 }
 
 nav a:visited {
-    color: #7707C5;
-    text-decoration: none;
-    font-size: 1.13em;
+  color: #7707C5;
+  text-decoration: none;
+  font-size: 1.13em;
 }
 
 .navbar-nav .nav-link:hover {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .sidenav {
-height: 85%;
-width: 250px;
-position: fixed;
-z-index: 0;
-top: 0;
-left: 0;
-background-color: #F06BA6;
-border: 1px solid #7707C5;
-box-shadow: 5px 4px 2px -3px rgb(55, 55, 55, 2);
-text-align: center;
-padding-top: 310px;
-overflow: auto;
-padding-bottom: 30px;
--ms-overflow-style: none;
-scrollbar-width: none;
+  height: 85%;
+  width: 250px;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background-color: #F06BA6;
+  border: 1px solid #7707C5;
+  box-shadow: 5px 4px 2px -3px rgb(55, 55, 55);
+  text-align: center;
+  padding-top: 310px;
+  overflow: auto;
+  padding-bottom: 30px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .sidenav::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .sidenav a {
-padding: 8px 8px 8px 32px;
-text-decoration: none;
-font-size: 15px;
-color: #818181;
-transition: 0.3s;
-width: 100%;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  transition: 0.3s;
+  width: 100%;
 }
 
 .sidenav a:hover {
-color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .sideNavImg {
-    border-radius: 100%;
-    height: 4em;
-    width: 4em;
-    text-align: left;
-    padding: 10px;
+  border-radius: 100%;
+  height: 4em;
+  width: 4em;
+  text-align: left;
+  padding: 10px;
 }
 
 .page-container {
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 150px;
-    margin-right: auto;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 150px;
+  margin-right: auto;
 }
 
 .inGrid {
-    object-fit: cover;
-    padding: 30px;
-    height: 300px;
-    width: 300px;
-    border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 30px;
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
 }
 
 .landing {
-    height: 50%;
-    width: 55%;
-    border-radius: 30%;
-    padding: 20px;
+  height: 50%;
+  width: 55%;
+  border-radius: 30%;
+  padding: 20px;
 }
 
 .philosophy-container {
-    max-width: 800px;
-    margin: 0px;
-    padding: 20px 100px;
-   
+  max-width: 800px;
+  margin: 0px;
+  padding: 20px 100px;
 }
 
 .philosophy {
-    padding: 20px;
-    text-align: left;
-    word-wrap: break-word;
-    max-width: 850px;
-    margin: 0px;
+  padding: 20px;
+  text-align: left;
+  word-wrap: break-word;
+  max-width: 850px;
+  margin: 0px;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+.recordedBirthdays {
+  padding: 20px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .container {
-    padding: 20px 16px;
+  padding: 20px 16px;
 }
 
 #root {
-    text-align: center;
-    margin-top: 2em;
+  text-align: center;
+  margin-top: 2em;
 }
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #7707C5;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-    transition: text-shadow 0.4s ease-in-out;
+  color: #7707C5;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  transition: text-shadow 0.4s ease-in-out;
 }
 
 h1 {
-    text-align: center;
-    color: black;
-    font-style: italic;
-    text-decoration: underline;
-    margin-bottom: 35px;
+  text-align: center;
+  color: black;
+  font-style: italic;
+  text-decoration: underline;
+  margin-bottom: 35px;
 }
 
 .btn {
-    background-color: #7707C5;
-    border-color: #7707C5;
-    color: white;
-    margin-bottom: 50px;
+  background-color: #7707C5;
+  border-color: #7707C5;
+  color: white;
+  margin-bottom: 50px;
 }
 
 .btn:hover {
-    background-color: white;
-    border-color: #7707C5;
-    color: black;
-    text-decoration: none;
-    box-shadow: 0 0 5px #3e07b5;
-    transition: background-color 0.5s ease;
+  background-color: white;
+  border-color: #7707C5;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0 0 5px #3e07b5;
+  transition: background-color 0.5s ease;
 }
 
 .form-control {
-    text-align: center;
+  text-align: center;
 }
 
 .form-range {
-    max-width: 300px;
-    margin: 15px;
-    padding: 0.25rem;
+  max-width: 300px;
+  margin: 15px;
+  padding: 0.25rem;
 }
 
 .form-check-input {
-    font-size: 1.25em;
-    margin-left: 10px;
+  font-size: 1.25em;
+  margin-left: 10px;
 }
 
 .col-md-4 {
-    max-width: 450px;
-    margin: 15 auto;
-    padding: 2em;
-    font-size: 1.3rem;
+  max-width: 450px;
+  margin: 15 auto;
+  padding: 2em;
+  font-size: 1.3rem;
 }
 
 footer {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1em;
-    border-top: 1px solid rgba(66, 66, 66, 0.688);
-    width: 100%;
-    margin-top: 30px;
-    padding: 30px;
-    background-color: #F06BA6;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  border-top: 1px solid rgba(66, 66, 66, 0.688);
+  width: 100%;
+  margin-top: 30px;
+  padding: 30px;
+  background-color: #F06BA6;
 }
 
 footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    float: left;
-    margin-right: 20px;
-
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  margin-right: 20px;
 }
 
 footer ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
 }
 
 footer ul li a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #subtitle {
-    font-size: 12px;
-    font-weight: bolder;
+  font-size: 12px;
+  font-weight: bolder;
 }
 
 form {
-    padding: 20px;
-    margin: 30px;
+  padding: 20px;
+  margin: 30px;
 }
 
 input {
-    width: 100%; 
-    padding: 10px 20px; 
-    margin: 8px 0; 
-    border: 2px solid #7707C5;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: 2px solid #7707C5;
+  box-sizing: border-box;
 }
 
 input:focus {
-    background-color:#7707C5;
-    border: 3px solid #555;
+  background-color: #7707C5;
+  border: 3px solid #555;
 }
 
 select {
-    width: 100%;
-    padding: 10px 20px; 
-    margin: 8px 0; 
-    border: 2px solid #7707C5;
-    box-sizing: border-box
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: 2px solid #7707C5;
+  box-sizing: border-box;
 }
 
 select:focus {
-    background-color: #7707C5;
-    border: 3px solid #555;
+  background-color: #7707C5;
+  border: 3px solid #555;
 }
 
 .showImg {
-    height: 250px;
-    width: 250px;
-    object-fit: cover;
+  height: 250px;
+  width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .calMain {
-    max-width: max-content;
-    margin: 3em auto 0 auto;
-    padding: 1.5em;
-    background-color: #fff;
-    border: 2px solid #7707C5;
-    border-radius: 8px;
-  }
-  
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 3em auto 0 auto;
+  padding: 1.5em;
+  background-color: #fff;
+  border: 2px solid #7707C5;
+  border-radius: 8px;
+}
 
-  .month-indicator {
-    color: #7707C5;
-    text-align: center;
-    font-weight: 500;
-  }
-  
-  .day-of-week,
-  .date-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-  }
-  
-header
-  .day-of-week {
-    margin-top: 1.25em;
-  }
-  
-  .day-of-week > * {
-    font-size: 0.7em;
-    color: #7707C5;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    font-variant: small-caps;
-    text-align: center;
-  }
-  
+.month-indicator {
+  color: #7707C5;
+  text-align: center;
+  font-weight: 500;
+}
 
-  .date-grid {
-    margin-top: 0.5em;
-  }
-  
-  .date-grid button:first-child {
-    grid-column: 6;
-  }
-  
+.day-of-week,
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
 
-  .date-grid button {
-    position: relative;
-    border: 0;
-    width: 4.5ch;
-    height: 4.5ch;
-    border-radius: 50%;
-    background-color: transparent;
-    color: #7707C5;
-  }
-  
-  .date-grid button:hover,
-  .date-grid button:focus {
-    outline: none;
-    background-color: #effcf6;
-    color: #147d64;
-  }
-  
-  .date-grid button:active,
-  .date-grid button.is-selected {
-    background-color: #c6f7e2;
-    color: #014d40;
-  }
+header .day-of-week {
+  margin-top: 1.25em;
+}
+
+.day-of-week > * {
+  font-size: 0.7em;
+  color: #7707C5;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+.date-grid {
+  margin-top: 0.5em;
+}
+
+.date-grid button:first-child {
+  grid-column: 6;
+}
+
+.date-grid button {
+  position: relative;
+  border: 0;
+  width: 4.5ch;
+  height: 4.5ch;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #7707C5;
+}
+
+.date-grid button:hover,
+.date-grid button:focus {
+  outline: none;
+  background-color: #effcf6;
+  color: #147d64;
+}
+
+.date-grid button:active,
+.date-grid button.is-selected {
+  background-color: #c6f7e2;
+  color: #014d40;
+}/*# sourceMappingURL=styles.css.map */
