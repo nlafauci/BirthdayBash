@@ -1,10 +1,10 @@
 const React = require('react')
 
-function Def(html) {
+function Def(props) {
   return (
     <html lang="en">
       <head>
-        <title>{html.title}</title>
+        <title>{props.title}</title>
         <link rel="icon" type="image/png" href="../images/HGFavicon.png" />
         <link
           rel="stylesheet"
@@ -16,37 +16,37 @@ function Def(html) {
         <link rel="stylesheet" href="/css/styles.css" />
       </head>
       <body>
-        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" className="banner" alt="banner image" />
         <nav aria-label="Navigation Bar">
-          <a href="/">
-            <label className="logo" aria-label="HarvestGarden Logo">HarvestGarden</label>
+          <a href="/birthdays">
+          <label className="logomini" aria-label="BirthdayBash Logo"><img src="../images/BirthdayBashLogoMini.png"/></label>
           </a>
           <ul>
             <li>
-              <a href="/" aria-label="Homepage Navigation Link">Home</a>
+              Happy Unbirthday, User!  ||
             </li>
             <li>
-              <a href="/plants" aria-label="Database Navigation Link">Database</a>
-            </li>
-            <li>
-              <a href="/plants/new" aria-label="Contribute Navigation Link">Contribute</a>
+              <a href="/logout" aria-label="Database Navigation Link"><button className="btn btn-danger btn-lg" aria-label="Button directing user to logout">Logout</button></a>
             </li>
           </ul>
         </nav>
-        <div id="root">{html.children}</div>
-        <footer>
+        <div id="root">
+        <div className="page-container">
+          {props.children}
+          </div>
+          </div>
+          <footer>
           <div className="container">
             <span className="my-info">
-              ✦ HarvestGarden ✦
+              ✦ BirthdayBash ✦
               <p className="copyright">
-                Copyright HarvestGarden-
+                Copyright BirthdayBash-
                 {new Date().getFullYear()}
               </p>
               <p>
-                <img src="../images/HGFavicon.png" alt="HarvestGarden Logo" />
+                <img src="../images/BirthdayBash16fav.png" alt="BirthdayBash Logo" />
               </p>
               <div id="subtitle">
-                <b>We love our plant community!</b>
+                <b>Every day is somebody's birthday!</b>
               </div>
             </span>
           </div>

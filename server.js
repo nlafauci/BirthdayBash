@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser')
 const authRoute = require('./userRoutes/AuthRoute')
 
 //require controllers
-const birthdayController = require('./controllers/BirthdayController')
+const birthdayController = require('./controllers/birthdays')
 // const userController = require('./controllers/UserController')
 
 

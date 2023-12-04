@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
   })
 // GET birthday show page
 router.get('/:id', async (req, res) => {
-    await db.Birthdays.findById(req.params._id)
+    await db.Birthdays.findById(req.params.id)
     .then(birthday => {
         res.render('birthdays/show', { birthday })
     })
