@@ -2,15 +2,38 @@
 const router = require('express').Router()
 const db = require("../models")
 
-const { Birthday } = db
+const { Birthdays } = db
 
 // Dashboard Routes
+//index
+router.get('/', async (req, res) => {
+    db.Birthdays.find()
+    .then((birthdays) => {
+      res.render('birthdays/index', { birthdays })
+    })
+    .catch(err => {
+      console.log(err)
+      res.render('error404')
+    })
+  })
+// birthday show page
+router.get('/:id', (req, res) => {
+    db.Birthdays.findById(req.params.id)
+    .then(birthday => {
+        res.render('birthdays/show', { birthday })
+    })
+    .catch(err => {
+        console.log('err', err)
+        res.render('error404')
+    })
+})
+//create birthday event
 router.post('/', async (req, res) => {
     if (!req.body.pic) {
         req.body.pic = ''
     }
-    if (!req.body.name) {
-        req.body.name = 'Name'
+    if (!req.body.firstName) {
+        req.body.firstName = 'Name'
     }
     if (!req.body.day) {
         req.body.day = '01'
@@ -18,41 +41,16 @@ router.post('/', async (req, res) => {
     if (!req.body.month) {
         req.body.month = '12'
     }
-    const birthday = await Birthday.create(req.body)
+    const birthday = await db.create(req.body)
     res.json(birthday)
 })
-
-router.get('/', async (req, res) => {
-    const birthdays = await Birthday.findAll()
-    res.json(birthdays)
-})
-
-router.get('/:birthdayId', async (req, res) => {
-    let birthdayId = Number(req.params.birthdayId)
-    if (isNaN(birthdayId)) {
-        res.status(404).json({ message: `Invalid id "${birthdayId}" `})
-    } else {
-        const birthday = await Birthday.findOne({
-            where: { birthdayId: birthdayId },
-            include: {
-                association: 'comments',
-                include: 'author'
-            }
-        })
-        if (!birthday) {
-            res.status(404).json({ message: `Could not find place with id "${placeId}"` })
-        } else {
-            res.json(birthday)
-        }
-    }
-})
-
+//
 router.put('/:birthdayId', async (req, res) => {
     let birthdayId = Number(req.params.birthdayId)
     if (isNaN(birthdayId)) {
         res.status(404).json({ message: `Invalid id "${birthdayId}"` })
     } else {
-        const birthday = await Birthday.findOne({
+        const birthday = await Birthdays.findOne({
             where: { birthdayId: birthdayId },
         })
         if (!birthday) {

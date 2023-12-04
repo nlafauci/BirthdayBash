@@ -15,14 +15,14 @@ function show(data) {
                     </div>
                     <div className="col-sm-6">
                         <h1>{data.birthday.name}</h1>
-                        <h2>Water Amount: </h2>
+                        {/* <h2>Water Amount: </h2>
                         {data.plant.needsWaterParagraph()}
                         <br />
                         <h2>Light Amount: </h2>
                         {data.plant.needsLightParagraph()}
                         <br />
                         <h3>Indoor/Outdoor</h3>
-                        {data.plant.isIndoorParagraph()}
+                        {data.plant.isIndoorParagraph()} */}
                         <h2>Description: </h2>
                         <h3>
                             {data.birthday.notes}
@@ -35,19 +35,6 @@ function show(data) {
                         </form>
                     </div>
                 </div>
-                <h1>Comments</h1>
-                {comments}
-                <form method="POST" action={`/birthdays/${data.birthday.id}/comment`}>
-                    <div className="form-group">
-                        <label htmlFor="content"> Content </label>
-                        <textarea name="content" className="form-control"> </textarea>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="author">Author</label>
-                        <input className="form-control" id="author" name="author" />
-                    </div>
-                    <input className="btn btn-primary" type="submit" value="Add Comment" aria-label="Add Comment Button"/>
-                </form>
             </main>
         </Def>
     )

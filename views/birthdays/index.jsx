@@ -6,9 +6,9 @@ function index (data) {
       return (
         <div key={birthday.id} className="col-md-4">
           <h2>
-            <a href={`/plants/${birthday.id}`}>{birthday.name}</a>
+            <a href={`/birthdays/${birthday.id}`}>{birthday.firstName}</a>
           </h2>
-          <img className="inGrid" src={birthday.image} alt={birthday.name}/>
+          <img className="inGrid" src={birthday.pic} alt={birthday.firstName}/>
         </div>  
       )
     })
