@@ -44,7 +44,23 @@ function login(props) {
           </form>
         </div>
         <footer>
-          {/* ... (same footer content as the home page) */}
+        <div className="container">
+            <span className="my-info">
+            <img src="../images/BirthdayBash16fav.png" alt="BirthdayBash Logo" />
+             BirthdayBash 
+             <img src="../images/BirthdayBash16fav.png" alt="BirthdayBash Logo" />
+              <p className="copyright">
+                Copyright BirthdayBash-
+                {new Date().getFullYear()}
+              </p>
+              <p>
+                <img src="../images/BirthdayBash16fav.png" alt="BirthdayBash Logo" />
+              </p>
+              <div id="subtitle">
+                <b>Every day is somebody's birthday!</b>
+              </div>
+            </span>
+          </div>
         </footer>
       </main>
     </html>
