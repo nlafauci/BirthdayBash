@@ -56,22 +56,22 @@ router.get('/new', async (req, res) => {
 //       })
 // })
   
-// router.put('/:id/edit', async (req, res) => {
-//     let birthdayId = Number(req.params.birthdayId)
-//     if (isNaN(birthdayId)) {
-//         res.status(404).json({ message: `Invalid id "${birthdayId}"` })
-//     } else {
-//         const birthday = await Birthdays.findOne({
-//             where: { birthdayId: birthdayId },
-//         })
-//         if (!birthday) {
-//             res.status(404).json({ message: `Could not find birthday with id "${birthdayId}" `})
-//         } else {
-//             Object.assign(birthday, req.body)
-//             await birthday.save()
-//             res.json(birthday)
-//         }
-//     }
-// })
+ router.put('/:id/edit', async (req, res) => {
+     let birthdayId = Number(req.params.birthdayId)
+     if (isNaN(birthdayId)) {
+         res.status(404).json({ message: `Invalid id "${birthdayId}"` })
+     } else {
+         const birthday = await Birthdays.findOne({
+             where: { birthdayId: birthdayId },
+         })
+         if (!birthday) {
+             res.status(404).json({ message: `Could not find birthday with id "${birthdayId}" `})
+         } else {
+             Object.assign(birthday, req.body)
+             await birthday.save()
+             res.json(birthday)
+         }
+     }
+ })
 
 module.exports = router
