@@ -2,12 +2,11 @@
 const router = require('express').Router()
 const db = require("../models")
 
-const { Birthdays } = db
 
 // Dashboard Routes
 //GET index page
 router.get('/', async (req, res) => {
-    db.Birthdays.find()
+    await db.Birthdays.find()
     .then((birthdays) => {
       res.render('birthdays/index', { birthdays })
     })
@@ -17,8 +16,8 @@ router.get('/', async (req, res) => {
     })
   })
 // GET birthday show page
-router.get('/:id', (req, res) => {
-    db.Birthdays.findById(req.params.id)
+router.get('/:id', async (req, res) => {
+    await db.Birthdays.findById(req.params._id)
     .then(birthday => {
         res.render('birthdays/show', { birthday })
     })
@@ -28,8 +27,8 @@ router.get('/:id', (req, res) => {
     })
 })
 // GET edit birthday form
-router.get('/:id/edit', (req, res) => {
-    db.Birthdays.findById(req.params.id)
+router.get('/:id/edit', async (req, res) => {
+   await db.Birthdays.findById(req.params._id)
     .then(birthday => {
         res.render('birthdays/edit', { birthday })
     })
@@ -39,13 +38,15 @@ router.get('/:id/edit', (req, res) => {
   })
 
 // GET new birthday form
-// router.get('/new', (req, res) => {
-//     res.render('places/new')
-//   })
+router.get('/new', async (req, res) => {
+    const birthdays = await db.Birthdays.find()
+    res.render('birthdays/new', { birthdays })
+  })
 
-//POST create birthday event
+// POST create birthday event
 // router.post('/', async (req, res) => {
-//     db.Birthdays.create(req.body)
+//     if (!req.body.pic) req.body.pic = undefined
+//     await db.Birthdays.create(req.body)
 //     .then(() => {
 //         res.redirect('/birthdays')
 //       })
