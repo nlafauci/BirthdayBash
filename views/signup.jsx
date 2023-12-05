@@ -40,6 +40,26 @@ function signup(props) {
               <label htmlFor="password">Password</label>
               <input type="password" id="password" name="password" required />
             </div>
+            <div>
+              <label htmlFor="email">e-mail</label>
+              <input type="text" id="email" name="email" required />
+            </div>
+            <div>
+              <label htmlFor="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div>
+              <label htmlFor="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+            <div>
+              <label htmlFor="contactPhoto">Profile Photo</label>
+              <input type="text" id="contactPhoto" name="contacPhoto"/>
+            </div>
+            <div>
+              <label htmlFor="birthday">Your Birthday</label>
+              <input type="date" id="birthday" name="birthday" required />
+            </div>
             <input type="submit" value="Sign up" />
           </form>
         </div>
