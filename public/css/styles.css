@@ -16,7 +16,7 @@ body {
     background: #fff;
   }
   .page-container {
-    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -31,6 +31,7 @@ body {
     height: 20px;
   }
 }
+
 main {
   margin-right: 20px;
   margin-left: 20px;
@@ -43,17 +44,40 @@ nav {
   z-index: 1;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 8em;
+  width: 90vw;
+  height: 3.3em;
   background: #F06BA6;
-  padding-top: 35px;
+  padding-top: 55px;
   text-align: center;
   text-decoration: none;
   font-family: Prompt;
   font-style: italic;
   color: #7707C5;
   border-bottom: 1px solid #7707C5;
+  border-right: 1px solid #7707C5;
+  border-left: 1px solid #7707C5;
+  border-top: 1px solid #7707C5;
+  margin-left: 90px;
   box-shadow: 0px 4px 2px -3px rgb(55, 55, 55);
+}
+
+.homeNav {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  height: 3.3em;
+  background: #F06BA6;
+  padding-top: 55px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Prompt;
+  font-style: italic;
+  color: #7707C5;
+  border-style: none;
+  margin-left: 90px;
+  box-shadow: none;
 }
 
 label.logo {
@@ -83,7 +107,8 @@ nav ul {
 nav ul li {
   display: inline-block;
   line-height: 80px;
-  margin: 5px;
+  margin-right: 150px;
+  font-size: .5em;
 }
 
 nav ul li a {
@@ -103,10 +128,6 @@ nav a:visited {
   color: #7707C5;
   text-decoration: none;
   font-size: 1.13em;
-}
-
-.navbar-nav .nav-link:hover {
-  font-size: 1.1rem;
 }
 
 .sidenav {
@@ -172,8 +193,8 @@ nav a:visited {
 }
 
 .landing {
-  height: 50%;
-  width: 55%;
+  height: 80%;
+  width: 80%;
   border-radius: 30%;
   padding: 20px;
 }
@@ -399,4 +420,4 @@ header .day-of-week {
 .date-grid button.is-selected {
   background-color: #c6f7e2;
   color: #014d40;
-}/*# sourceMappingURL=styles.css.map */
+}

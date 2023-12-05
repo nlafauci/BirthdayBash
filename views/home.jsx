@@ -17,7 +17,7 @@ function home(props) {
         <link rel="stylesheet" href="/css/styles.css" />
       </head>
       <main>
-      <nav aria-label="Navigation Bar">
+      <nav className="homeNav" aria-label="Navigation Bar">
           <a href="/">
             <label className="logo" aria-label="BirthdayBash Logo"><img src="../images/BirthdayBashLogoMini.png"/></label>
           </a>
@@ -36,7 +36,7 @@ function home(props) {
           It's Somebody's Birthday Today! Sign-up or Log in to Celebrate!
           <img src="../images/BirthdayBash16fav.png" alt="BirthdayBash Logo" />
           </marquee>
-          <img src="../images/BirthdayBashBigLogo.png" className="landing" alt="Photo of a birthday cake." />
+          <img src="../images/BirthdayBashBigLogo.png" className="landing" alt="Logo reading Birthday Bash, the name of the application." />
         </div>
         <div className="philosophy-container">
           <div className="philosophy">
