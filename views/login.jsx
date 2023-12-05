@@ -33,7 +33,7 @@ function login(props) {
         <div>
           <form method="POST" action="/login">
             <div>
-              <label htmlFor="email">E-mail</label>
+              <label htmlFor="email">Email</label>
               <input type="text" id="email" name="email" required />
             </div>
             <div>
