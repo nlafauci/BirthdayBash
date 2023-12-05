@@ -17,8 +17,8 @@ module.exports.Signup = async (req, res, next) => {
       httpOnly: false,
     });
     res
-      .status(201)
-      .json({ message: "User signed in successfully", success: true, user });
+      .status(201).redirect('/birthdays')
+      console.log({ message: "User signed in successfully", success: true, user });
     next();
   } catch (error) {
     console.error(error);
